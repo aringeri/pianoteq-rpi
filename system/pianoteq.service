@@ -1,0 +1,13 @@
+[Unit]
+Description=Pianoteq service
+
+[Service]
+User=pi
+LimitRTPRIO=infinity
+LimitMEMLOCK=infinity
+ExecStart=/usr/bin/python /home/pi/pianoteq_controller/pianoteq.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
